@@ -1,0 +1,14 @@
+{
+    "version": "1.0.0",
+    "name": "com.jp.plugin.instagram",
+    "cordova_name": "Instagram",
+    "description": "Share your images and videos on instagram",
+    "license": "Apache 2.0",
+    "keywords": [
+        "instagram"
+    ],
+    "platforms": [
+        "android"
+    ],
+    "engines": []
+}
