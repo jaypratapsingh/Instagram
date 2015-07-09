@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" 
 xmlns:android="http://schemas.android.com/apk/res/android"
     id="com.jp.plugin.instagram"
-    version="1.0.0">
+    version="1.1.0">
     <name>Instagram</name>
     <description>Share your images and videos on instagram</description>
     <license>Apache 2.0</license>

@@ -5,12 +5,14 @@ import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 
 import java.io.File;
 
-public class Instagram extends CordovaPlugin implements ConnectionCallbacks, OnConnectionFailedListener {
+public class Instagram extends CordovaPlugin {
 
 	String caption = "", mediaPath = "";
 
@@ -47,8 +49,15 @@ public class Instagram extends CordovaPlugin implements ConnectionCallbacks, OnC
 
 					try
 					{
-						cordova.getActivity().startActivity(Intent.createChooser(share, "Share to"));
-						callbackContext.error("success");
+                        if(isPackageInstalled("com.instagram.android", cordova.getActivity()) == true)
+                        {
+                            cordova.getActivity().startActivity(Intent.createChooser(share, "Share to"));
+                            callbackContext.error("success");
+                        }
+                        else
+                        {
+                            callbackContext.error("Instagram not installed");
+                        }
 					}
 					catch(Exception e)
 					{
@@ -68,6 +77,14 @@ public class Instagram extends CordovaPlugin implements ConnectionCallbacks, OnC
 				return false;
 			}
 	}
-}
 
+    private boolean isPackageInstalled(String packagename, Context context) {
+        PackageManager pm = context.getPackageManager();
+        try {
+            pm.getPackageInfo(packagename, PackageManager.GET_ACTIVITIES);
+            return true;
+        } catch (PackageManager.NameNotFoundException e) {
+            return false;
+        }
+    }
 }
