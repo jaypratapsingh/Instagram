@@ -31,8 +31,8 @@ instagram.share(
 
 
 
-** caption   :   String data format **
-** mediaPath :   Path of your file **
+*caption   :   String data format*
+*mediaPath :   Path of your file*
 
 
 
