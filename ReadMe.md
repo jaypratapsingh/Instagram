@@ -31,11 +31,11 @@ instagram.share(
 
 
 
-* caption   :   String data format
-* mediaPath :   Path of your file
+** caption   :   String data format **
+** mediaPath :   Path of your file **
 
 
 
-*GitHub URL:   https://github.com/jaypratapsingh/Instagram
+> GitHub URL:   https://github.com/jaypratapsingh/Instagram
 
-*npm url :     https://www.npmjs.com/package/com.jp.plugin.instagram
+> npm url :     https://www.npmjs.com/package/com.jp.plugin.instagram
